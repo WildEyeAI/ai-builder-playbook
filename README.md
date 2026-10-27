@@ -1,7 +1,5 @@
 # The AI Builder Playbook
 
-A practical companion to Henry V. Alfano's Rundown University kickoff workflow.
-
 *By Henry V. Alfano, Founder, Wild Eye AI.*
 
 An app-building platform can get a prototype on screen quickly. The trouble starts when the next prompt rewrites the layout, invents a second styling system, or changes a file you thought was protected. You spend the afternoon fixing damage instead of building the product.

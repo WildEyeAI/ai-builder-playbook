@@ -1,12 +1,12 @@
 Copyright (c) 2026 Henry V. Alfano (Wild Eye AI)
 
-LICENSE SCOPE FOR THE PART 1 PACKAGE
+LICENSE SCOPE FOR THE PLAYBOOK PACKAGE
 
-Henry-authored prose and natural-language prompt templates in this Part 1 package are licensed under Creative Commons Attribution 4.0 International. Executable code samples are licensed under the MIT License.
+Henry-authored prose and natural-language prompt templates in this playbook package are licensed under Creative Commons Attribution 4.0 International. Executable code samples are licensed under the MIT License.
 
-This scope includes the README, customization document, kickoff runbook, three core guides, and reading edition, including its introduction and afterword. Natural-language prompts remain prose when displayed in fenced blocks; executable code samples within them use MIT.
+This scope includes the README, customization document, kickoff and platform detachment runbooks, three core guides, and reading edition, including its introduction and afterword. Natural-language prompts remain prose when displayed in fenced blocks; executable code samples within them use MIT.
 
-Attribution: Henry V. Alfano, Founder, Wild Eye AI. Give appropriate credit, link to the CC BY 4.0 license, and indicate changes when reusing covered prose or prompts. Retain the applicable copyright and permission notices for MIT-covered code. Third-party software and assets retain their own licenses. The Part 2 cutover material is not included in this package.
+Attribution: Henry V. Alfano, Founder, Wild Eye AI. Give appropriate credit, link to the CC BY 4.0 license, and indicate changes when reusing covered prose or prompts. Retain the applicable copyright and permission notices for MIT-covered code. Third-party software and assets retain their own licenses.
 
 Full prose and prompt license: LICENSE-CC-BY-4.0.txt
 Full executable-code license: LICENSE-MIT.TXT

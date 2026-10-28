@@ -4,7 +4,7 @@
 
 By Henry V. Alfano, Founder, Wild Eye AI.
 
-This optional reading edition brings the three core guides together. Start with the [kickoff runbook](../ai-codegen-project-kickoff-runbook.md) and [project customization](../CUSTOMIZE.md). The core-guide bodies match their standalone sources; relative links are adjusted for this folder. This edition does not include the Part 2 cutover runbook. See the [README licensing notice](../README.md#licensing-and-attribution) for the package license scope.
+This optional reading edition brings the three core guides together. Start with the [kickoff runbook](../ai-codegen-project-kickoff-runbook.md) and [project customization](../CUSTOMIZE.md). The core-guide bodies match their standalone sources; relative links are adjusted for this folder. The package also includes the standalone [platform detachment runbook](../platform-detachment-runbook.md); use it for production cutover and independent operation. See the [README licensing notice](../README.md#licensing-and-attribution) for the package license scope.
 
 ## Contents
 
@@ -15,6 +15,7 @@ This optional reading edition brings the three core guides together. Start with 
 - [The One Fix Rule](#8-the-one-fix-rule)
 - [Part II. Frontend Coding Standards](#part-ii-frontend-coding-standards)
 - [Part III. Slate Design System](#part-iii-slate-design-system)
+- [Production cutover runbook](../platform-detachment-runbook.md)
 - [Afterword](#afterword)
 - [License summary](#appendix-a-license-summary)
 - [MIT License](#appendix-b-mit-license-executable-code-samples)
@@ -34,7 +35,7 @@ Security was a critical part of the everyday process too: sweeps by the AI code 
 
 I also built with a production transition in mind. I have successfully moved several other projects from AI development platforms into independently managed production environments. The fintech prototype's own move is still ahead. Database ownership is critical to that separation. When a new database or backend is needed, provision it in your own account before the first build prompt. A copy of the code does not bring the database with it. Then use the opening prompt to establish the framework, routes, layout, and rules before asking for features.
 
-Read the governance guide for the method: how to drive an AI code generator without accumulating debt. The coding standards set the rules regardless of who writes the code. The design system supplies the concrete values. The separate Part 2 material will cover the operational transition. Take what is useful and adapt the rest. The placeholders are meant to be replaced with your own.
+Read the governance guide for the method: how to drive an AI code generator without accumulating debt. The coding standards set the rules regardless of who writes the code. The design system supplies the concrete values. The [platform detachment runbook](../platform-detachment-runbook.md) covers the operational transition as a separate procedure in this package. Take what is useful and adapt the rest. The placeholders are meant to be replaced with your own.
 
 ---
 
@@ -44,7 +45,7 @@ Read the governance guide for the method: how to drive an AI code generator with
 
 **Scope:** A four-layer governance protocol, a catalog of recurring failure patterns, usable prompt templates, project-scaled security practices, and incident lessons from three real projects. The examples use React, TypeScript, Tailwind, and managed Postgres; choose the applicable profile and adapt the implementation details to your system.
 
-**Origin and intent:** The fintech prototype supplied the D12 CSS and layout remediation case study. The prototype was developed with an eventual move to independently controlled production in mind. Its own transition is still ahead; successful detachments of other projects inform the separate cutover material planned for Part 2. The goal is to use the speed of AI code generation while retaining control over code, data, services, and operations.
+**Origin and intent:** The fintech prototype supplied the D12 CSS and layout remediation case study. The prototype was developed with an eventual move to independently controlled production in mind. Its own transition is still ahead; successful detachments of other projects inform the [platform detachment runbook](../platform-detachment-runbook.md). The goal is to use the speed of AI code generation while retaining control over code, data, services, and operations.
 
 The project descriptions used in the examples are:
 - **Large app:** the fintech prototype, with many components and dense, responsive layouts. Business-specific details are generalized.
@@ -87,7 +88,7 @@ Set the order before the generator writes the first feature:
 3. Put the framework, backend boundary, routes, layout shell, state ownership, and global rules in the opening prompt. Build empty page shells first.
 4. Inspect the scaffold and any intended service connections before adding features.
 
-Layer 4 below contains a framework example. The [kickoff runbook](../ai-codegen-project-kickoff-runbook.md) supplies the full setup sequence and three backend choices. Part 2 will address production cutover separately.
+Layer 4 below contains a framework example. The [kickoff runbook](../ai-codegen-project-kickoff-runbook.md) supplies the full setup sequence and three backend choices. The [platform detachment runbook](../platform-detachment-runbook.md) covers the later production handoff and independent operation.
 
 ---
 
@@ -1230,6 +1231,8 @@ These are reusable checks adapted from D12. Choose the widths and interactions t
 
 ## 15. Recovery and rollback strategy
 
+This section covers code recovery during development. Production recovery must also account for live data, credentials, services, and traffic; see [operational rollback](../platform-detachment-runbook.md#68-operational-rollback-versus-code-restoration).
+
 When something breaks, use the most targeted recovery method:
 
 ```
@@ -2020,11 +2023,11 @@ Founder, Wild Eye AI
 
 ## Appendix A. License summary
 
-Henry-authored prose and natural-language prompt templates in this Part 1 package are licensed under Creative Commons Attribution 4.0 International. Executable code samples are licensed under the MIT License.
+Henry-authored prose and natural-language prompt templates in this playbook package are licensed under Creative Commons Attribution 4.0 International. Executable code samples are licensed under the MIT License.
 
-This scope includes the README, customization document, kickoff runbook, three core guides, and reading edition, including its introduction and afterword. Natural-language prompts remain prose when displayed in fenced blocks; executable code samples within them use MIT.
+This scope includes the README, customization document, kickoff and platform detachment runbooks, three core guides, and reading edition, including its introduction and afterword. Natural-language prompts remain prose when displayed in fenced blocks; executable code samples within them use MIT.
 
-Attribution: Henry V. Alfano, Founder, Wild Eye AI. Give appropriate credit, link to the CC BY 4.0 license, and indicate changes when reusing covered prose or prompts. Retain the applicable copyright and permission notices for MIT-covered code. Third-party software and assets retain their own licenses. The Part 2 cutover material is not included in this package.
+Attribution: Henry V. Alfano, Founder, Wild Eye AI. Give appropriate credit, link to the CC BY 4.0 license, and indicate changes when reusing covered prose or prompts. Retain the applicable copyright and permission notices for MIT-covered code. Third-party software and assets retain their own licenses.
 
 ## Appendix B. MIT License (executable code samples)
 
@@ -2057,13 +2060,13 @@ SOFTWARE.
 ```text
 Copyright (c) 2026 Henry V. Alfano (Wild Eye AI)
 
-LICENSE SCOPE FOR THE PART 1 PACKAGE
+LICENSE SCOPE FOR THE PLAYBOOK PACKAGE
 
-Henry-authored prose and natural-language prompt templates in this Part 1 package are licensed under Creative Commons Attribution 4.0 International. Executable code samples are licensed under the MIT License.
+Henry-authored prose and natural-language prompt templates in this playbook package are licensed under Creative Commons Attribution 4.0 International. Executable code samples are licensed under the MIT License.
 
-This scope includes the README, customization document, kickoff runbook, three core guides, and reading edition, including its introduction and afterword. Natural-language prompts remain prose when displayed in fenced blocks; executable code samples within them use MIT.
+This scope includes the README, customization document, kickoff and platform detachment runbooks, three core guides, and reading edition, including its introduction and afterword. Natural-language prompts remain prose when displayed in fenced blocks; executable code samples within them use MIT.
 
-Attribution: Henry V. Alfano, Founder, Wild Eye AI. Give appropriate credit, link to the CC BY 4.0 license, and indicate changes when reusing covered prose or prompts. Retain the applicable copyright and permission notices for MIT-covered code. Third-party software and assets retain their own licenses. The Part 2 cutover material is not included in this package.
+Attribution: Henry V. Alfano, Founder, Wild Eye AI. Give appropriate credit, link to the CC BY 4.0 license, and indicate changes when reusing covered prose or prompts. Retain the applicable copyright and permission notices for MIT-covered code. Third-party software and assets retain their own licenses.
 
 Full prose and prompt license: LICENSE-CC-BY-4.0.txt
 Full executable-code license: LICENSE-MIT.TXT

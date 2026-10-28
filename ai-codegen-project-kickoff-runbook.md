@@ -377,4 +377,4 @@ Keep the original failure and the reason for the rule. Otherwise the next cleanu
 
 When a development lane closes, mark its runbook retired and point to the replacement. Keep the old body as history. Do not leave two documents presenting themselves as the current operating instructions.
 
-Part 2 will cover production cutover; it is not included in this kickoff package. Repository disconnection alone does not establish independent operation. Account for any data, authentication, storage, runtime services, deployment, and recovery before closing the old lane. Exporting code does not migrate those dependencies.
+Continue with the [platform detachment runbook](platform-detachment-runbook.md) when preparing production cutover. Repository disconnection alone does not establish independent operation. Account for any data, authentication, storage, runtime services, deployment, and recovery before closing the old lane. Exporting code does not migrate those dependencies.

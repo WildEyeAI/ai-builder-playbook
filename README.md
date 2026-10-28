@@ -28,6 +28,7 @@ Exporting code does not migrate data, authentication, storage, or other platform
 | File | What it helps you control |
 |---|---|
 | [Kickoff runbook](ai-codegen-project-kickoff-runbook.md) | What to do first, what to paste where, and who owns each decision. |
+| [Platform detachment runbook](platform-detachment-runbook.md) | How to prepare and verify independent operation, switch production traffic, recover safely, and retire old platform access. |
 | [AI code generator governance](docs/governance/ai-codegen-governance.md) | The centerpiece: a four-layer protocol, recurring failure patterns, ready-to-use prompt templates, security practices, incident lessons, and recorded results. It is a working playbook for keeping generated code from becoming an unmaintainable mess. |
 | [Frontend coding standards](docs/governance/frontend-coding-standards.md) | The rules that hold regardless of who writes the code, with a concrete reference profile and data-fetching migration examples. |
 | [Slate design system](docs/governance/design-system.md) | One source of truth for tokens and reusable styling classes. Adapt the palette and framework conventions before adopting it. |
@@ -59,14 +60,14 @@ Those experiences support the method. They do not establish that this newly gene
 
 ## Part 2: cutover
 
-This first package covers kickoff and governed development. Part 2 will cover cutover and independent operation. No publication date is fixed. The cutover resource is not included in this package.
+The [platform detachment runbook](platform-detachment-runbook.md) carries the method into production cutover and independent operation. Use it when the prototype is ready to move. It covers the dependencies your project actually has, the release handoff, traffic switching, verification, recovery, and retirement of old platform access. Complete the [cutover decisions](CUSTOMIZE.md#prepare-for-cutover) before using its procedure.
 
 ## Licensing and attribution
 
-Henry-authored prose and natural-language prompt templates in this Part 1 package are licensed under Creative Commons Attribution 4.0 International. Executable code samples are licensed under the MIT License.
+Henry-authored prose and natural-language prompt templates in this playbook package are licensed under Creative Commons Attribution 4.0 International. Executable code samples are licensed under the MIT License.
 
-This scope includes the README, customization document, kickoff runbook, three core guides, and reading edition, including its introduction and afterword. Natural-language prompts remain prose when displayed in fenced blocks; executable code samples within them use MIT.
+This scope includes the README, customization document, kickoff and platform detachment runbooks, three core guides, and reading edition, including its introduction and afterword. Natural-language prompts remain prose when displayed in fenced blocks; executable code samples within them use MIT.
 
-Attribution: Henry V. Alfano, Founder, Wild Eye AI. Give appropriate credit, link to the CC BY 4.0 license, and indicate changes when reusing covered prose or prompts. Retain the applicable copyright and permission notices for MIT-covered code. Third-party software and assets retain their own licenses. The Part 2 cutover material is not included in this package.
+Attribution: Henry V. Alfano, Founder, Wild Eye AI. Give appropriate credit, link to the CC BY 4.0 license, and indicate changes when reusing covered prose or prompts. Retain the applicable copyright and permission notices for MIT-covered code. Third-party software and assets retain their own licenses.
 
 See [LICENSE-CC-BY-4.0.txt](LICENSE-CC-BY-4.0.txt) and [LICENSE-MIT.TXT](LICENSE-MIT.TXT) for the scope notices and complete legal texts. A [CC BY 4.0 summary](https://creativecommons.org/licenses/by/4.0/) is also available.

@@ -14,7 +14,7 @@ Generalized from prototype development and production engineering experience. Pr
 
 **Scope:** A four-layer governance protocol, a catalog of recurring failure patterns, usable prompt templates, project-scaled security practices, and incident lessons from three real projects. The examples use React, TypeScript, Tailwind, and managed Postgres; choose the applicable profile and adapt the implementation details to your system.
 
-**Origin and intent:** The fintech prototype supplied the D12 CSS and layout remediation case study. The prototype was developed with an eventual move to independently controlled production in mind. Its own transition is still ahead; successful detachments of other projects inform the separate cutover material planned for Part 2. The goal is to use the speed of AI code generation while retaining control over code, data, services, and operations.
+**Origin and intent:** The fintech prototype supplied the D12 CSS and layout remediation case study. The prototype was developed with an eventual move to independently controlled production in mind. Its own transition is still ahead; successful detachments of other projects inform the [platform detachment runbook](../../platform-detachment-runbook.md). The goal is to use the speed of AI code generation while retaining control over code, data, services, and operations.
 
 The project descriptions used in the examples are:
 - **Large app:** the fintech prototype, with many components and dense, responsive layouts. Business-specific details are generalized.
@@ -57,7 +57,7 @@ Set the order before the generator writes the first feature:
 3. Put the framework, backend boundary, routes, layout shell, state ownership, and global rules in the opening prompt. Build empty page shells first.
 4. Inspect the scaffold and any intended service connections before adding features.
 
-Layer 4 below contains a framework example. The [kickoff runbook](../../ai-codegen-project-kickoff-runbook.md) supplies the full setup sequence and three backend choices. Part 2 will address production cutover separately.
+Layer 4 below contains a framework example. The [kickoff runbook](../../ai-codegen-project-kickoff-runbook.md) supplies the full setup sequence and three backend choices. The [platform detachment runbook](../../platform-detachment-runbook.md) covers the later production handoff and independent operation.
 
 ---
 
@@ -1199,6 +1199,8 @@ These are reusable checks adapted from D12. Choose the widths and interactions t
 ---
 
 ## 15. Recovery and rollback strategy
+
+This section covers code recovery during development. Production recovery must also account for live data, credentials, services, and traffic; see [operational rollback](../../platform-detachment-runbook.md#68-operational-rollback-versus-code-restoration).
 
 When something breaks, use the most targeted recovery method:
 

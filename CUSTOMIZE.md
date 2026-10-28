@@ -50,8 +50,23 @@ The search command in the frontend guide discovers candidate code; it does not p
 
 Historical failure snippets are explicitly labeled. Do not copy them as working patterns. The generic kickoff contains no branch-reset or force-push procedure.
 
+## Prepare for cutover
+
+Use the [platform detachment runbook](platform-detachment-runbook.md) after the kickoff and governed development work. Fill its [private cutover record](platform-detachment-runbook.md#36-the-private-cutover-record) with the actual project decisions. The package supplies a procedure and a blank record, not deployment credentials, infrastructure, migration scripts, or a universal host configuration.
+
+| Decision | What to resolve before the production window |
+|---|---|
+| Dependencies and ownership | Which services remain, move, are replaced, or retire; their owners and independent access. Mark absent services not applicable. |
+| Release | Exact tested commit or artifact, configuration revision, required checks, decision owner, and promotion path. |
+| State and events | Final write boundary, applicable identity and storage migration, held events, active consumers, and replay or duplicate handling. Include browser-local state where relevant. |
+| Traffic | Destination runtime, domain and certificate requirements, switch method, expected overlap, and who can change it. |
+| Verification and recovery | Observable acceptance checks, stop conditions, compatible recovery point, write reconciliation, and recovery owner. |
+| Continuing operation | Working branch and environment, release process, monitoring, applicable backups, observation window, and access-retirement criteria. |
+
+The Git, npm, backend CLI, environment-file, and routing examples refer to your application and chosen providers. Resolve their versions, files, permissions, and targets before use. Do not add a database or separate API to satisfy an example. Keep the completed dependency and credential inventory in private operating documentation.
+
 ## Keep the documents in agreement
 
-The standalone guides are the editing sources for the optional reading edition. Change a rule once in its source and rebuild the reading edition; do not maintain conflicting copies. The kickoff's copy blocks remain inline. When you adapt a block into a platform field or prompt-factory project, record the source revision and update that copy when its rule changes.
+The standalone guides are the editing sources for the optional reading edition. Change a rule once in its source and rebuild the reading edition; do not maintain conflicting copies. The kickoff's copy blocks remain inline. The cutover procedure lives in the standalone runbook; the reading edition links to it rather than maintaining another copy. When you adapt a block into a platform field or prompt-factory project, record the source revision and update that copy when its rule changes.
 
 Return to the [README](README.md) for the reading order.
